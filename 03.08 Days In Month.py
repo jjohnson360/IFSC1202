@@ -10,3 +10,4 @@ def days_in_month(month):
 
 month = int(input("Enter month: "))
 print(f"{days_in_month(month)}")
+
