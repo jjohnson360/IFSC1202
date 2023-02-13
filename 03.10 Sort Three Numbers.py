@@ -1,8 +1,10 @@
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = int(input("Enter third number: "))
+def main():
+    n = int(input("Enter N: ").strip())
+    product = 1
+    for i in range(n):
+        num = int(input("Enter Number {}: ".format(i + 1)).strip())
+        product *= num
+    print(product)
 
-numbers = [a, b, c]
-numbers.sort()
-
-print(numbers)
+if __name__ == '__main__':
+    main()
