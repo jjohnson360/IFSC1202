@@ -3,7 +3,8 @@ def max(a, b):
         return a
     else:
         return b
-
-print(max(3, 5))
-print(max(5, 3))
+x=3
+y=5
+print(max(x, y))
+print(max(y, x))
 print(max(int(input("Enter First Number: ")), int(input("Enter Second Number: "))))
