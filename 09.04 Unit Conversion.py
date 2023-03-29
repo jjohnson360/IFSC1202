@@ -1,21 +1,35 @@
-def get_unit_index(unit, units_list):
-    try:
-        return units_list.index(unit) + 1
-    except ValueError:
-        print(f"{unit} is not valid")
-        exit()
+FromValue = float(input("Enter From Value: "))
+FromUnit = input("Enter From Unit (mm, cm, m, km, in, ft, yd, mi): ")
+ToUnit = input("Enter To Unit (mm, cm, m, km, in, ft, yd, mi): ")
 
-from_value = float(input("Enter From Value: "))
-from_unit = input("Enter From Unit (mm, cm, m, km, in, yd, mi): ")
-to_unit = input("Enter To Unit (mm, cm, m, km, in, yd, mi): ")
+with open("09.04 Conversion.txt") as f:
+    lines = f.readlines()
 
-conversion_table = [line.strip().split("\t") for line in open("09.04 Conversion.txt")]
-units_list = [row[0] for row in conversion_table]
+conv_table = []
+for line in lines:
+    conv_table.append(line.strip().split())
 
-from_unit_index = get_unit_index(from_unit, units_list)
-to_unit_index = get_unit_index(to_unit, units_list)
+from_unit_row_index = None
+for i in range(1, len(conv_table)):
+    if FromUnit == conv_table[i][0]:
+        from_unit_row_index = i
+        break
 
-multiplier = float(conversion_table[from_unit_index][to_unit_index])
-result = round(from_value * multiplier, 7)
+if from_unit_row_index is None:
+    print("FromUnit is not valid")
+    exit()
 
-print(f"{from_value} {from_unit} => {result} {to_unit}")
+to_unit_col_index = None
+for j in range(1, len(conv_table[0])):
+    if ToUnit == conv_table[0][j]:
+        to_unit_col_index = j
+        break
+
+if to_unit_col_index is None:
+    print("ToUnit is not valid")
+    exit()
+
+multiplier = float(conv_table[from_unit_row_index][to_unit_col_index])
+result = round(FromValue * multiplier, 7)
+
+print(FromValue, FromUnit, "=>", result, ToUnit)
