@@ -1,5 +1,5 @@
 class Pet:
-    def __int__(self):
+    def __init__(self):
         self.name = ""
         self.type = ""
         self.age = ""
