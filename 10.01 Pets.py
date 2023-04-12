@@ -16,6 +16,6 @@ for line in lines:
     pet.age = pet_data[2]
     pets.append(pet)
 
-print("{:<10} {:<10} {:<10}".format("Name", "Type", "Age"))
+print("{:>8} {:>8} {:>8}".format("Name", "Type", "Age"))
 for pet in pets:
-    print("{:<10} {:<10} {:<10}".format(pet.name, pet.type, pet.age))
+    print("{:>8} {:>8} {:>8}".format(pet.name, pet.type, pet.age))
