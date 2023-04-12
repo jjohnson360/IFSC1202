@@ -40,7 +40,8 @@ class Student:
             return "F"
 
 def print_header():
-    print("{:>12} {:>12} {:>12} {:>12} {:>12} {:>12}".format("First Name", "Last Name", "ID Number", "Running Avg", "Semester Avg", "Letter Grade"))
+    print("{:>12} {:>12} {:>12} {:>12} {:>12} {:>12}".format("First", "Last", "ID", "Running", "Semester", "Letter"))
+    print("{:>12} {:>12} {:>12} {:>12} {:>12} {:>12}".format("Name", "Name", "Number", "Average", "Average", "Grade"))
 
 def print_divider():
     print("-" * 12, "-" * 12, "-" * 12, "-" * 12, "-" * 12, "-" * 12)
@@ -63,5 +64,3 @@ with open(filename, 'r') as file:
 
         student = Student(firstname, lastname, tnumber, scores)
         print_student(student)
-
-print_divider()
