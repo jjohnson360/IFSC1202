@@ -19,6 +19,6 @@ for line in lines:
     item = RetailItem(description, units_on_hand, price)
     items.append(item)
 
-print("{:>25} {:>20} {:>10} {:>20}".format("Description", "Units On Hand", "Price", "Inventory Value"))
+print("{:>12} {:>20} {:>10} {:>20}".format("Description", "Units On Hand", "Price", "Inventory Value"))
 for item in items:
-    print("{:>25} {:>20} {:>10.2f} {:>20.2f}".format(item.description, item.units_on_hand, item.price, item.inventory_value()))
+    print("{:>12} {:>20} {:>10.2f} {:>20.2f}".format(item.description, item.units_on_hand, item.price, item.inventory_value()))
