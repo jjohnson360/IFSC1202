@@ -21,7 +21,7 @@ class StudentList:
         return -1
 
     def print_student_list(self):
-        print("{:<15} {:<15} {:<15} {:<15} {:<49} {:<19} {:<40} ".format("First Name", "Last Name", "T-Number", "Course", "Name", "Room", "Meeting Time", ))
+        print("{:<15} {:<15} {:<15} {:<15} {:<49} {:<19} {:<40} ".format("First Name", "Last Name", "T-Number", "Course", "Name", "Room", "Meeting Times", ))
 
         for student in self.Studentlist:
             print("{:<14} {:<15} {:<15}".format(student.FirstName, student.LastName, student.TNumber))
