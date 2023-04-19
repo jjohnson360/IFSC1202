@@ -72,8 +72,6 @@ class Vending:
                 self.VendingTotalLostCount += 1
                 self.VendingTotalLostValue += item.CostPerItem
 
-
-# Main Program
 vending = Vending()
 vending.load_vending_items_from_file('Final Project Vending.txt')
 with open('Final Project Sales.txt', 'r') as f:
