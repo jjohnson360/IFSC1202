@@ -19,7 +19,6 @@ def find_employee(employees, id_num):
             return i
     return -1
 
-# Read Employees.txt and create a list of Employee objects
 employees = []
 with open("11.02 Employees.txt", "r") as file:
     for line in file:
@@ -27,7 +26,6 @@ with open("11.02 Employees.txt", "r") as file:
         employee = Employee(data[0], data[1], int(data[2]), float(data[3]))
         employees.append(employee)
 
-# Read Hours.txt and update the hours worked for each employee
 with open("11.02 Hours.txt", "r") as file:
     for line in file:
         data = line.strip().split(",")
@@ -37,7 +35,6 @@ with open("11.02 Hours.txt", "r") as file:
         if index != -1:
             employees[index].HoursWorked += hours
 
-# Print the results
 print(" First     Last      ID   Hours  Hourly   Weekly")
 print("  Name     Name  Number  Worked    Wage      Pay")
 for employee in employees:
