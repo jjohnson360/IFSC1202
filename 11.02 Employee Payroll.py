@@ -39,4 +39,4 @@ print(" First     Last      ID   Hours  Hourly   Weekly")
 print("  Name     Name  Number  Worked    Wage      Pay")
 for employee in employees:
     weekly_pay = round(employee.WeeklyPay(), 2)
-    print(f"{employee.FirstName:>6} {employee.LastName:>8} {employee.IDNumber:>7} {employee.HoursWorked:>7} {employee.Wage:>7} {weekly_pay:>8}")
+    print(f"{employee.FirstName:>6} {employee.LastName:>8} {employee.IDNumber:>7} {employee.HoursWorked:>7.2f} {employee.Wage:>7} {weekly_pay:>8}")
